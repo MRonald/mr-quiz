@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import Head from "next/head";
+
 import db from '../db.json';
 import Widget from '../src/components/Widget';
 import QuizBackground from '../src/components/QuizBackground';
@@ -25,18 +27,21 @@ export const QuizContainer = styled.div`
 export default function Home() {
   return (
     <QuizBackground backgroundImage={db.bg}>
+      <Head>
+        Títulão
+      </Head>
       <QuizContainer>
         <Widget>
           <Widget.Header>
-            <h1>adasdasdasdas</h1>
+            <h1>MR Quiz</h1>
           </Widget.Header>
           <Widget.Content>
-            <p>asdasd</p>
+            <p>Perguntas sobre...</p>
           </Widget.Content>
         </Widget>
         <Widget>
           <Widget.Content>
-            <h1>adasdasdasdas</h1>
+            <h1>Quizes da Galera</h1>
             <p>asdasd</p>
           </Widget.Content>
         </Widget>
